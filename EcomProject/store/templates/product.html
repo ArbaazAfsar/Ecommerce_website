@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+
+
+
+
+
+
+
+
+{% block content %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product Card UI Design</title>
+
+    <!-- Vendor Script -->
+ 
+    <link rel="stylesheet" href="{% static 'css/product.css' %}">
+
+</head>
+
+
+
+<div class="pcontainer">
+    <div class="imgBx">
+        <img src="{{product.image.url}}" alt="Nike Jordan Proto-Lyte Image">
+    </div>
+    <!-- <div class="details"> -->
+        <div class="content">
+            <h2 class="proHrading">{{product.name}} <br>
+                
+            </h2>
+            <p>
+               {{product.description}}
+     
+            </p>
+          
+            <h3><span class="a-price-symbol">₹</span>{{product.price}}</h3>
+            <button>Buy Now</button>
+        </div>
+    <!-- </div> -->
+</div>
+
+
+
+
+
+    
+{% endblock content %}
+
+    
